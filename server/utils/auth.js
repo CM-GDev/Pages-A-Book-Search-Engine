@@ -29,9 +29,10 @@ module.exports = {
     }
     // return the request object so it can be passed to the resolver as `context`
     return req;
-    // send to next endpoint
-    //next();
+          // dont need this: send to next endpoint
+          //next();
   },
+
   signToken: function ({ username, email, _id }) {
     const payload = { username, email, _id };
 

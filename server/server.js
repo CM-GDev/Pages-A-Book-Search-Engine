@@ -9,7 +9,8 @@ const { authMiddleware } = require('./utils/auth');
 const { typeDefs, resolvers } = require('./schemas');
 
 const db = require('./config/connection');
-// dont need this: const routes = require('./routes');
+
+    // dont need this: const routes = require('./routes');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -27,7 +28,8 @@ app.use(express.json());
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
-//don't need this: app.use(routes);
+    //don't need this: app.use(routes);
+    
 //when in production mode use:
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
