@@ -12,6 +12,7 @@ const LoginForm = () => {
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
 //adding LOGIN_USER mutation
+//eslint-disable-next-line
   const [login, {error, data}] = useMutation(LOGIN_USER)
 
 

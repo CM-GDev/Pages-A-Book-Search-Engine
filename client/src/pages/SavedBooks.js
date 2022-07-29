@@ -22,6 +22,7 @@ const SavedBooks = () => {
   
 
   // adding REMOVE_BOOK mutation
+  //eslint-disable-next-line
   const [removeBook, {error}] = useMutation(REMOVE_BOOK)
 
   // useEffect(() => {
@@ -59,6 +60,7 @@ const SavedBooks = () => {
 
     try {
       // const response = await deleteBook(bookId, token);
+      //eslint-disable-next-line
       const { data } = await removeBook({
         variables: { bookId }
       });

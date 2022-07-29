@@ -14,6 +14,7 @@ const SignupForm = () => {
   // set state for alert
   const [showAlert, setShowAlert] = useState(false);
   // adding ADD_USER mutation
+  //eslint-disable-next-line
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
   const handleInputChange = (event) => {
