@@ -3,7 +3,9 @@
 
   ## Description
   
-  - To exercise my developing REACT.js skills, I took starter code with a fully functioning book API search engine built with a RESTful API backend and refactored it to be a GraphQL API built with Apollo Server. The app was built using the MERN stack with a React front end, MongoDB database, and Node.js/Express.js server and API.
+  - To exercise my developing REACT.js skills, I took starter code with a fully functioning book API search engine built with a RESTful API backend and refactored it to be a GraphQL API built with Apollo Server.
+  - The app lets you search for books and if your are a logged in user, you can save books to your account.
+  - The app was built using the MERN stack with a React front end, MongoDB database, and Node.js/Express.js server and API.
   - To make the GraphQL API and Apollo Server possible, I implemented the following React Hooks and techniques :
     - TypeDefs and Resolvers
     - Queries and Mutations
@@ -12,7 +14,8 @@
     
   The following are animations of the application in use.
 
-  ![Image1](./client/src/images/giphy1.gif) ![Image2](./client/src/images/giphy2.gif)
+  ![Image1](./client/src/images/giphy1.gif)   
+  ![Image2](./client/src/images/giphy2.gif)
     
    
    
