@@ -12,7 +12,7 @@
     
   The following are animations of the application in use.
 
-  ![Image1](./client/src/images/giphy.gif)   
+  ![Image1](./client/src/images/giphy1.gif) ![Image2](./client/src/images/giphy2.gif)
     
    
    
