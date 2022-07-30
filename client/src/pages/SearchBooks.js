@@ -41,7 +41,7 @@ const SearchBooks = () => {
       }
 
       const { items } = await response.json();
-      console.log(items)
+      //console.log(items)
       const bookData = items.map((book) => ({
         bookId: book.id,
         authors: book.volumeInfo.authors || ['No author to display'],
@@ -74,12 +74,10 @@ const SearchBooks = () => {
     try {
       //const response = await saveBook(bookToSave, token);
       //eslint-disable-next-line
-     console.log("hello")
       const { data } = await saveBook ({
         variables: {bookData: {...bookToSave}}
       });
-      console.log(savedBookIds)
-      console.log(data)
+      
       // if (!response.ok) {
       //   throw new Error('something went wrong!');
       // }
