@@ -17,7 +17,7 @@ const SearchBooks = () => {
   const [savedBookIds, setSavedBookIds] = useState(getSavedBookIds());
   // adding SAVE_BOOK mutation
   //eslint-disable-next-line
-  const [saveBook, {error, data}] = useMutation(SAVE_BOOK)
+  const [saveBook, {error}] = useMutation(SAVE_BOOK)
 
   // set up useEffect hook to save `savedBookIds` list to localStorage on component unmount
   // learn more here: https://reactjs.org/docs/hooks-effect.html#effects-with-cleanup
@@ -41,7 +41,7 @@ const SearchBooks = () => {
       }
 
       const { items } = await response.json();
-
+      console.log(items)
       const bookData = items.map((book) => ({
         bookId: book.id,
         authors: book.volumeInfo.authors || ['No author to display'],
@@ -60,22 +60,26 @@ const SearchBooks = () => {
   // create function to handle saving a book to our database
   const handleSaveBook = async (bookId) => {
     // find the book in `searchedBooks` state by the matching id
+    
     const bookToSave = searchedBooks.find((book) => book.bookId === bookId);
-
+    
     // get token
     const token = Auth.loggedIn() ? Auth.getToken() : null;
-
+    
     if (!token) {
+      console.log('something went wrong')
       return false;
     }
 
     try {
       //const response = await saveBook(bookToSave, token);
       //eslint-disable-next-line
+     console.log("hello")
       const { data } = await saveBook ({
-        vairables: {input: bookToSave}
+        variables: {bookData: {...bookToSave}}
       });
-
+      console.log(savedBookIds)
+      console.log(data)
       // if (!response.ok) {
       //   throw new Error('something went wrong!');
       // }
