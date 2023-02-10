@@ -38,7 +38,7 @@ To install the application:
 
 ## Usage
 
-I have also deployed the full-stack application to Heroku, [PAGES](https://arcane-citadel-66789.herokuapp.com/)
+I have also deployed the full-stack application to Heroku, [PAGES](https://cm-gdev-books.herokuapp.com/)
 
 ## Credits
 
